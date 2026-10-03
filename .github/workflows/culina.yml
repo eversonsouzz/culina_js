@@ -122,7 +122,7 @@ jobs:
 
 - name: Validate STOCK_DEVICE - ${{ inputs.STOCK_DEVICE }}
         run: |
-          REPO="SEU_USUARIO/SEU_REPO"
+          REPO="jessijs/culina_js"
           BRANCH="Devices"
 
           source "$(pwd)/scripts/git_utils.sh"
@@ -136,7 +136,7 @@ jobs:
               fi
 
               echo "✅ Device supported: $STOCK_DEVICE"
-              GIT_SPARSE_DOWNLOAD "SEU_USUARIO/SEU_REPO" "Devices" "$STOCK_DEVICE" \
+              GIT_SPARSE_DOWNLOAD "jessijs/culina_js" "Devices" "$STOCK_DEVICE" \
                   "$(pwd)/QuantumROM/Devices/$STOCK_DEVICE"
           else
               echo "ℹ️ STOCK_DEVICE is set to None."
